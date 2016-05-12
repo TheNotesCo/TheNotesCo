@@ -14,23 +14,27 @@
     = csrf_meta_tag
 
   %body
-    .top-bar-container{ 'data-sticky-container': ''}
-      .sticky{ 'data-options': 'anchor: page; marginTop: 0; stickyOn: small;', 'data-sticky': '' }
-        .top-bar
-          .top-bar-left
-            %ul.dropdown.menu{ 'data-dropdown-menu': '' }
-              %li.menu-text The Notes & Co.
-              %li
-                %a{ href: '#' } Share
-              %li
-                %a{ href: '#' } Music
-              %li
-                %a{ href: '#' } Profile
-          .top-bar-right
-            %ul.menu
-              %li
-                %input{ placeholder: 'Search', type: 'search' }
-              %li
-                %button.button{ type: 'button' } Search
-
-    = yield
+    #siteContainer
+      #siteNavStickyContainer{ 'data-sticky-container': '' }
+        #siteNavStickyWrap.sticky{ 'data-anchor': 'siteContainer', 'data-margin-top': '0', 'data-sticky': '', 'data-sticky-on': 'small' }
+          #siteNavToggler.title-bar{ 'data-hide-for': 'medium', 'data-responsive-toggle': 'siteNav' }
+            %button.menu-icon{ 'data-toggle': '', type: 'button' }
+            .title-bar-title The Notes & Co.
+          #siteNav.top-bar
+            .top-bar-left
+              %ul.dropdown.menu{ 'data-dropdown-menu': '' }
+                %li.menu-text The Notes & Co.
+                %li
+                  %a Share
+                %li
+                  %a Music
+                %li
+                  %a Profile
+            .top-bar-right
+              %ul.menu
+                %li
+                  %input{ placeholder: 'Search', type: 'search' }/
+                %li
+                  %button.button{ type: 'button' } Search
+      #pageContent
+        = yield
