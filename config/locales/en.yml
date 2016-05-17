@@ -21,3 +21,10 @@
 
 en:
   hello: "Hello world"
+
+  enterprise: 'The Notes & Co.'
+  coming: 'Coming soon...'
+  share: 'Share'
+  music: 'Music'
+  profile: 'Profile'
+  search: 'Search'

@@ -6,7 +6,7 @@
 
     %meta{ :name => 'viewport', :content => 'width=device-width, initial-scale=1.0' }
 
-    %title= content_for?(:title) ? yield(:title) : 'The Notes & Co.'
+    %title= content_for?(:title) ? yield(:title) : t(:enterprise)
     = favicon_link_tag 'favicon.ico'
 
     = stylesheet_link_tag 'application'
@@ -19,22 +19,27 @@
         #siteNavStickyWrap.sticky{ 'data-anchor': 'siteContainer', 'data-margin-top': '0', 'data-sticky': '', 'data-sticky-on': 'small' }
           #siteNavToggler.title-bar{ 'data-hide-for': 'medium', 'data-responsive-toggle': 'siteNav' }
             %button.menu-icon{ 'data-toggle': '', type: 'button' }
-            .title-bar-title The Notes & Co.
+            .title-bar-title = t :enterprise
           #siteNav.top-bar
             .top-bar-left
               %ul.dropdown.menu{ 'data-dropdown-menu': '' }
-                %li.menu-text The Notes & Co.
+                %li.menu-text
+                  = t :enterprise
                 %li
-                  %a Share
+                  %a
+                    = t :share
                 %li
-                  %a Music
+                  %a
+                    = t :music
                 %li
-                  %a Profile
+                  %a
+                    = t :profile
             .top-bar-right
               %ul.menu
                 %li
-                  %input{ placeholder: 'Search', type: 'search' }/
+                  %input{ placeholder: t(:search), type: 'search' }/
                 %li
-                  %button.button{ type: 'button' } Search
+                  %button.button{ type: 'button' }
+                    = t :search
       #pageContent
         = yield
