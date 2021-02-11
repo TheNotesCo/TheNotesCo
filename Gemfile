@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
 
-gem 'rails', '5.2.2.1'      # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '6.0.2.1'      # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 
 gem 'coffee-rails'        # Use CoffeeScript for .coffee assets and views
 gem 'puma'                # Use Puma as the app server
 gem 'sass-rails'          # Use SCSS for stylesheets
 gem 'uglifier', '>= 1.3.0'  # Use Uglifier as compressor for JavaScript assets
 
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+# See https://github.com/rails/execjs readme for more supported runtimes
+gem 'mini_racer', platforms: :ruby
 
 gem 'hamlit'              # Use haml syntax through hamlit
 gem 'foundation-rails'    # Use Zurb Foundation as front-end framework
@@ -47,4 +47,4 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-ruby '2.6.2'              # Require Ruby version
+ruby '2.7.0'              # Require Ruby version
